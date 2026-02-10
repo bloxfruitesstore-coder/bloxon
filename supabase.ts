@@ -1,3 +1,4 @@
+
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = 'https://nwuunyrkouyhuoyryuig.supabase.co';
@@ -24,14 +25,18 @@ ALTER TABLE orders ADD COLUMN IF NOT EXISTS country text;
 ALTER TABLE orders ADD COLUMN IF NOT EXISTS notes text;
 
 -- 2. Create Products Table (if not exists)
--- Updated Constraint for Type to include 'STYLE' and 'SWORD'
+-- Updated Constraint for Type to include 'STYLE', 'SWORD', and 'LEVELING'
+-- NOTE: If the table already exists, you may need to drop the constraint and re-add it:
+-- ALTER TABLE products DROP CONSTRAINT products_type_check;
+-- ALTER TABLE products ADD CONSTRAINT products_type_check CHECK (type in ('ACCOUNT', 'STYLE', 'SWORD', 'LEVELING'));
+
 create table if not exists products (
   id text primary key,
   name text not null,
   description text,
   image text,
   price numeric not null,
-  type text check (type in ('ACCOUNT', 'STYLE', 'SWORD')),
+  type text check (type in ('ACCOUNT', 'STYLE', 'SWORD', 'LEVELING')),
   level integer,
   fruits text[],
   rareItems text[],
