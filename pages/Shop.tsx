@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Product, User, Order, SiteSettings } from '../types';
-import { ShoppingCart, CheckCircle, Info, X as CloseIcon, Swords, Star, ShieldCheck, Trophy, Sparkles, Trash2, LayoutGrid, UserCircle, ArrowUp, Heart, ShoppingBag, Globe, Copy, Instagram, MessageSquare, StickyNote, Mail, Sword } from 'lucide-react';
+import { ShoppingCart, CheckCircle, Info, X as CloseIcon, Swords, Star, ShieldCheck, Trophy, Sparkles, Trash2, LayoutGrid, UserCircle, ArrowUp, Heart, ShoppingBag, Globe, Copy, Instagram, MessageSquare, StickyNote, Mail, Sword, Zap } from 'lucide-react';
 
 // Custom TikTok Icon
 const TikTokIcon = ({ size = 24, className = "" }: { size?: number, className?: string }) => (
@@ -27,7 +27,7 @@ const Shop: React.FC<ShopProps> = ({ products, currentUser, cart, addToCart, cle
   const navigate = useNavigate();
   const location = useLocation();
   
-  const [filter, setFilter] = useState<'ALL' | 'ACCOUNT' | 'STYLE' | 'SWORD'>('ALL');
+  const [filter, setFilter] = useState<'ALL' | 'ACCOUNT' | 'STYLE' | 'SWORD' | 'LEVELING'>('ALL');
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [checkoutStep, setCheckoutStep] = useState<'DETAILS' | 'PLATFORM'>('DETAILS');
   
@@ -180,6 +180,7 @@ ${itemsList}
       <div className="max-w-7xl mx-auto mb-12 flex flex-wrap justify-center gap-4">
         <button onClick={() => setFilter('ALL')} className={`px-8 py-3 rounded-2xl font-black text-sm transition-all flex items-center gap-2 ${filter === 'ALL' ? 'bg-blue-600 text-white shadow-[0_0_15px_rgba(37,99,235,0.3)]' : 'bg-[#111] text-gray-500 hover:bg-[#1a1a1a]'}`}><LayoutGrid size={18} /> الكل</button>
         <button onClick={() => setFilter('ACCOUNT')} className={`px-8 py-3 rounded-2xl font-black text-sm transition-all flex items-center gap-2 ${filter === 'ACCOUNT' ? 'bg-orange-600 text-white shadow-[0_0_15px_rgba(234,88,12,0.3)]' : 'bg-[#111] text-gray-500 hover:bg-[#1a1a1a]'}`}><UserCircle size={18} /> الحسابات</button>
+        <button onClick={() => setFilter('LEVELING')} className={`px-8 py-3 rounded-2xl font-black text-sm transition-all flex items-center gap-2 ${filter === 'LEVELING' ? 'bg-yellow-600 text-white shadow-[0_0_15px_rgba(202,138,4,0.3)]' : 'bg-[#111] text-gray-500 hover:bg-[#1a1a1a]'}`}><Zap size={18} /> تطوير</button>
         <button onClick={() => setFilter('STYLE')} className={`px-8 py-3 rounded-2xl font-black text-sm transition-all flex items-center gap-2 ${filter === 'STYLE' ? 'bg-red-600 text-white shadow-[0_0_15px_rgba(220,38,38,0.3)]' : 'bg-[#111] text-gray-500 hover:bg-[#1a1a1a]'}`}><Swords size={18} /> الأساليب</button>
         <button onClick={() => setFilter('SWORD')} className={`px-8 py-3 rounded-2xl font-black text-sm transition-all flex items-center gap-2 ${filter === 'SWORD' ? 'bg-purple-600 text-white shadow-[0_0_15px_rgba(147,51,234,0.3)]' : 'bg-[#111] text-gray-500 hover:bg-[#1a1a1a]'}`}><Sword size={18} /> السيوف</button>
       </div>
@@ -204,6 +205,7 @@ ${itemsList}
                 if (isOutOfStock) return 'نفذ';
                 if (isInCart) return 'في السلة';
                 if (product.type === 'ACCOUNT') return 'Buy Account';
+                if (product.type === 'LEVELING') return 'Get Service';
                 if (product.type === 'STYLE') return 'Buy Style';
                 return 'Buy Sword';
               };
@@ -211,13 +213,21 @@ ${itemsList}
               // Determine color scheme based on type
               const getTypeColor = () => {
                  if (product.type === 'ACCOUNT') return 'bg-orange-600';
+                 if (product.type === 'LEVELING') return 'bg-yellow-600';
                  if (product.type === 'STYLE') return 'bg-red-600';
                  if (product.type === 'SWORD') return 'bg-purple-600';
                  return 'bg-blue-600';
               };
               
               const typeColorClass = getTypeColor();
-              const badgeText = product.type === 'ACCOUNT' ? 'حساب أسطوري' : product.type === 'STYLE' ? 'أسلوب قتالي' : 'سيف نادر';
+              let badgeText = '';
+              switch(product.type) {
+                  case 'ACCOUNT': badgeText = 'حساب أسطوري'; break;
+                  case 'LEVELING': badgeText = 'خدمة تطوير'; break;
+                  case 'STYLE': badgeText = 'أسلوب قتالي'; break;
+                  case 'SWORD': badgeText = 'سيف نادر'; break;
+                  default: badgeText = 'منتج';
+              }
 
               return (
                 <div key={product.id} className={`group relative bg-[#0a0a0a] rounded-[3.5rem] border border-gray-800 shadow-lg transition-all duration-500 hover:border-blue-900/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.15)] hover:-translate-y-3 flex flex-col ${isOutOfStock ? 'opacity-60 grayscale' : ''}`}>
@@ -233,7 +243,7 @@ ${itemsList}
                     </button>
 
                     <div className="absolute top-6 right-6 flex flex-col gap-2 items-end">
-                      <div className={`backdrop-blur px-5 py-2 rounded-2xl text-[10px] font-black shadow-xl flex items-center gap-2 border border-white/10 ${product.type === 'ACCOUNT' ? 'bg-orange-600/90 text-white' : product.type === 'STYLE' ? 'bg-red-600/80 text-white' : 'bg-purple-600/80 text-white'}`}>
+                      <div className={`backdrop-blur px-5 py-2 rounded-2xl text-[10px] font-black shadow-xl flex items-center gap-2 border border-white/10 ${product.type === 'ACCOUNT' ? 'bg-orange-600/90 text-white' : product.type === 'LEVELING' ? 'bg-yellow-600/90 text-white' : product.type === 'STYLE' ? 'bg-red-600/80 text-white' : 'bg-purple-600/80 text-white'}`}>
                          <ShieldCheck size={14} />
                          {badgeText}
                       </div>
@@ -370,7 +380,7 @@ ${itemsList}
 
                     <div className="grid grid-cols-2 gap-4 w-full">
                         <a 
-                            href="https://www.instagram.com/bloxstore87?igsh=MWh4bTM0d3I0OTgwcA==" 
+                            href="https://www.instagram.com/blox_on/" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="bg-gradient-to-tr from-purple-600 to-pink-600 text-white py-4 rounded-2xl font-black flex items-center justify-center gap-2 hover:opacity-90 transition-opacity shadow-lg shadow-pink-900/20"
@@ -378,7 +388,7 @@ ${itemsList}
                             <Instagram size={20} /> انستقرام
                         </a>
                         <a 
-                            href="https://tiktok.com/@bloxon.market" 
+                            href="https://www.tiktok.com/@bloxon.market" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="bg-black text-white border border-gray-800 py-4 rounded-2xl font-black flex items-center justify-center gap-2 hover:bg-[#111] transition-colors shadow-lg"
