@@ -20,7 +20,7 @@ const About: React.FC = () => {
         {/* Header */}
         <div className="mb-12 text-center animate-in fade-in slide-in-from-bottom-4 duration-700">
             <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-6">
-                قصة <span className="text-blue-600 drop-shadow-[0_0_15px_rgba(37,99,235,0.5)]">BLOXON</span>
+                قصة <span className="text-blue-600 drop-shadow-[0_0_15px_rgba(37,99,235,0.5)]">BLOX STORE</span>
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto font-bold leading-relaxed mb-10">
                 وجهتك الأولى والموثوقة لامتلاك أقوى حسابات وفواكه Blox Fruits بأمان وسرعة خيالية.
@@ -68,7 +68,7 @@ const About: React.FC = () => {
             <h2 className="text-3xl font-black text-white mb-8 relative z-10 border-r-4 border-blue-600 pr-4">رؤيتنا ومهمتنا</h2>
             <div className="space-y-6 text-gray-400 font-medium relative z-10 leading-loose text-lg">
                 <p>
-                    تأسس <span className="text-white font-bold">Bloxon</span> بهدف سد الفجوة في سوق الألعاب العربي، حيث كان اللاعبون يواجهون صعوبة في إيجاد متاجر موثوقة لشراء حسابات وعناصر الألعاب بأسعار منافسة وبطرق دفع مريحة.
+                    تأسس <span className="text-white font-bold">Blox Store</span> بهدف سد الفجوة في سوق الألعاب العربي، حيث كان اللاعبون يواجهون صعوبة في إيجاد متاجر موثوقة لشراء حسابات وعناصر الألعاب بأسعار منافسة وبطرق دفع مريحة.
                 </p>
                 <p>
                     نحن نسعى لتقديم تجربة تسوق احترافية تليق باللاعبين العرب، مع التركيز الكامل على الشفافية، المصداقية، والجودة العالية للمنتجات. كل حساب يتم عرضه في متجرنا يمر بعملية فحص دقيقة للتأكد من خلوه من أي مشاكل تقنية أو أمنية.
@@ -84,7 +84,7 @@ const About: React.FC = () => {
             <div>
                 <h4 className="text-red-500 font-black text-lg mb-2">إخلاء مسؤولية قانوني</h4>
                 <p className="text-gray-500 text-xs leading-relaxed font-bold">
-                    Bloxon هو متجر مستقل ولا يتبع لشركة Roblox Corporation أو Gamer Robot Inc (مطوري Blox Fruits) بأي شكل من الأشكال. جميع الحقوق التجارية للعبة وشخصياتها مملوكة لأصحابها الأصليين. نحن نقدم خدمة وساطة وبيع حسابات تم تطويرها بشكل قانوني وآمن، ولا نتحمل مسؤولية سوء استخدام الحسابات بعد البيع.
+                    Blox Store هو متجر مستقل ولا يتبع لشركة Roblox Corporation أو Gamer Robot Inc (مطوري Blox Fruits) بأي شكل من الأشكال. جميع الحقوق التجارية للعبة وشخصياتها مملوكة لأصحابها الأصليين. نحن نقدم خدمة وساطة وبيع حسابات تم تطويرها بشكل قانوني وآمن، ولا نتحمل مسؤولية سوء استخدام الحسابات بعد البيع.
                 </p>
             </div>
         </div>
