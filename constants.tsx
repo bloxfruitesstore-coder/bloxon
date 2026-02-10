@@ -53,7 +53,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     id: 'level-sword',
     name: 'تطوير السيوف (Sword Mastery)',
     description: 'خدمة رفع ماستري السيوف الأسطورية والنادرة. احصل على جميع حركات سيفك المفضل الآن.',
-    image: 'https://api.a0.dev/assets/image?text=blox%20fruits%20swords%20clashing%20sparks%20mastery%20neon%20katana',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdx0q43cPlCQlNYZOCt9DMYYPuvul01aYW0A&s',
     price: 0,
     type: 'LEVELING',
     paymentMethods: ['ROBLOX'],
