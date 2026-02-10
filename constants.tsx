@@ -26,6 +26,51 @@ export const INITIAL_PRODUCTS: Product[] = [
     inStock: true,
     stockQuantity: 999
   },
+   // ================= LEVELING SERVICES (خدمات التطوير) =================
+  {
+    id: 'level-account',
+    name: 'تطوير الحساب (Account Leveling)',
+    description: 'خدمة رفع ليفل حسابك إلى الماكس أو المستوى الذي تريده. سرعة في التنفيذ وضمان الأمان 100%.',
+    image: 'https://api.a0.dev/assets/image?text=blox%20fruits%20level%20up%20arrow%20green%20stats%20neon%20style%20rpg',
+    price: 0,
+    type: 'LEVELING',
+    paymentMethods: ['ROBLOX'],
+    inStock: true,
+    stockQuantity: 999
+  },
+  {
+    id: 'level-fruit',
+    name: 'تطوير الفواكه (Fruit Mastery)',
+    description: 'رفع ماستري الفواكه (Mastery) لفتح جميع المهارات. نضمن لك فتح الحركات في وقت قياسي.',
+    image: 'https://api.a0.dev/assets/image?text=blox%20fruits%20devil%20fruit%20glowing%20mastery%20unlock%20neon%20power',
+    price: 0,
+    type: 'LEVELING',
+    paymentMethods: ['ROBLOX'],
+    inStock: true,
+    stockQuantity: 999
+  },
+  {
+    id: 'level-sword',
+    name: 'تطوير السيوف (Sword Mastery)',
+    description: 'خدمة رفع ماستري السيوف الأسطورية والنادرة. احصل على جميع حركات سيفك المفضل الآن.',
+    image: 'https://api.a0.dev/assets/image?text=blox%20fruits%20swords%20clashing%20sparks%20mastery%20neon%20katana',
+    price: 0,
+    type: 'LEVELING',
+    paymentMethods: ['ROBLOX'],
+    inStock: true,
+    stockQuantity: 999
+  },
+  {
+    id: 'level-gun',
+    name: 'تطوير المسدسات (Gun Mastery)',
+    description: 'رفع ماستري الأسلحة (Guns) مثل Soul Guitar وغيرها. خدمة سريعة ومضمونة.',
+    image: 'https://api.a0.dev/assets/image?text=blox%20fruits%20guns%20soul%20guitar%20mastery%20neon%20shooter',
+    price: 0,
+    type: 'LEVELING',
+    paymentMethods: ['ROBLOX'],
+    inStock: true,
+    stockQuantity: 999
+  },
 
   // ================= FIGHTING STYLES (الأساليب) =================
   {
