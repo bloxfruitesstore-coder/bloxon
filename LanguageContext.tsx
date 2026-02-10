@@ -56,6 +56,7 @@ const translations: Record<Language, Record<string, string>> = {
     account: "حساب",
     style: "أسلوب قتالي",
     sword: "سيف أسطوري",
+    leveling: "خدمات التطوير",
   },
   en: {
     nav_home: "Home",
@@ -102,6 +103,7 @@ const translations: Record<Language, Record<string, string>> = {
     account: "Account",
     style: "Fighting Style",
     sword: "Legendary Sword",
+    leveling: "Leveling Services",
   }
 };
 
