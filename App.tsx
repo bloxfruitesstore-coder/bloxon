@@ -446,8 +446,8 @@ const App: React.FC = () => {
               )}
 
               <div className="flex justify-center gap-6 mt-8">
-                  <a href="https://www.instagram.com/bloxstore87?igsh=MWh4bTM0d3I0OTgwcA==" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#111] rounded-full flex items-center justify-center text-pink-500 border border-gray-800"><Instagram size={20} /></a>
-                  <a href="https://tiktok.com/@blox.store92" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#111] rounded-full flex items-center justify-center text-white border border-gray-800"><TikTokIcon size={20} /></a>
+                  <a href="https://www.instagram.com/blox_on/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#111] rounded-full flex items-center justify-center text-pink-500 border border-gray-800"><Instagram size={20} /></a>
+                  <a href="https://www.tiktok.com/@bloxon.market" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-[#111] rounded-full flex items-center justify-center text-white border border-gray-800"><TikTokIcon size={20} /></a>
               </div>
            </div>
         </div>
@@ -528,10 +528,10 @@ const App: React.FC = () => {
 
       <footer className="bg-[#050505] border-t border-blue-900/20 py-12 text-center text-gray-500 text-xs">
         <div className="flex justify-center gap-4 mb-8">
-            <a href="https://www.instagram.com/bloxstore87?igsh=MWh4bTM0d3I0OTgwcA==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#111] rounded-xl flex items-center justify-center text-pink-500 hover:scale-110 transition-all border border-gray-800 hover:border-pink-500/50 shadow-sm hover:shadow-[0_0_15px_rgba(236,72,153,0.2)]">
+            <a href="https://www.instagram.com/blox_on/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#111] rounded-xl flex items-center justify-center text-pink-500 hover:scale-110 transition-all border border-gray-800 hover:border-pink-500/50 shadow-sm hover:shadow-[0_0_15px_rgba(236,72,153,0.2)]">
                 <Instagram size={20} />
             </a>
-            <a href="https://tiktok.com/@blox.store92" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#111] rounded-xl flex items-center justify-center text-white hover:scale-110 transition-all border border-gray-800 hover:border-white/50 shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+            <a href="https://www.tiktok.com/@bloxon.market" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#111] rounded-xl flex items-center justify-center text-white hover:scale-110 transition-all border border-gray-800 hover:border-white/50 shadow-sm hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]">
                 <TikTokIcon size={20} />
             </a>
         </div>
