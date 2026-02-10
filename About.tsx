@@ -28,10 +28,10 @@ const About: React.FC = () => {
 
             {/* Social Media Links */}
             <div className="flex justify-center gap-6">
-                <a href="https://www.instagram.com/bloxstore87?igsh=MWh4bTM0d3I0OTgwcA==" target="_blank" rel="noopener noreferrer" className="w-16 h-16 bg-[#111] rounded-[1.5rem] flex items-center justify-center text-pink-500 hover:scale-110 transition-all duration-300 shadow-[0_0_20px_rgba(236,72,153,0.1)] hover:shadow-[0_0_30px_rgba(236,72,153,0.3)] border border-gray-800 hover:border-pink-500/50 hover:bg-pink-900/10 group">
+                <a href="https://www.instagram.com/blox_on" target="_blank" rel="noopener noreferrer" className="w-16 h-16 bg-[#111] rounded-[1.5rem] flex items-center justify-center text-pink-500 hover:scale-110 transition-all duration-300 shadow-[0_0_20px_rgba(236,72,153,0.1)] hover:shadow-[0_0_30px_rgba(236,72,153,0.3)] border border-gray-800 hover:border-pink-500/50 hover:bg-pink-900/10 group">
                     <Instagram size={32} className="group-hover:drop-shadow-[0_0_8px_rgba(236,72,153,0.8)]" />
                 </a>
-                <a href="https://tiktok.com/@blox.store92" target="_blank" rel="noopener noreferrer" className="w-16 h-16 bg-[#111] rounded-[1.5rem] flex items-center justify-center text-gray-200 hover:scale-110 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] border border-gray-800 hover:border-white/50 hover:bg-white/5 group">
+                <a href="https://www.tiktok.com/@bloxon.market" target="_blank" rel="noopener noreferrer" className="w-16 h-16 bg-[#111] rounded-[1.5rem] flex items-center justify-center text-gray-200 hover:scale-110 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] border border-gray-800 hover:border-white/50 hover:bg-white/5 group">
                     <TikTokIcon size={30} className="group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
                 </a>
             </div>
