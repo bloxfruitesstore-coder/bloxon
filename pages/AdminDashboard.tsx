@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Product, User, Order, SiteSettings, OrderStatus } from '../types';
@@ -749,6 +750,7 @@ const AdminDashboard: React.FC<AdminProps> = ({
                   <option value="ACCOUNT">حساب (Account)</option>
                   <option value="STYLE">أسلوب (Style)</option>
                   <option value="SWORD">سيف (Sword)</option>
+                  <option value="LEVELING">تطوير (Leveling)</option>
                 </select>
               </div>
               
